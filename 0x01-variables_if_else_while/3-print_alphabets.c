@@ -1,9 +1,7 @@
 #include <stdio.h>
 /**
  *main - Entry point
- *
  *Return: 0
- *
  */
 int main(void)
 {
@@ -12,7 +10,12 @@ int main(void)
 	do {
 		putchar (c);
 		c = c + 1;
-	} while (c = 'z');
+	} while (c <= 'z');
+	c = 'A';
+	do {
+		putchar (c);
+		c = c + 1;
+	} while (c <= 'Z');
 	putchar ('\n');
 	return (0);
 }
