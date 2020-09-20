@@ -1,1 +1,1 @@
-C - Variables, if, else, while
+C language - Variables, if, else, while
