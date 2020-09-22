@@ -1,10 +1,9 @@
 #include "holberton.h"
-
 /**
   *_abs - convert to abs
-  *Return: 0 when success
-*/
-
+  *@i: integer
+  *Return: i to function
+  */
 int _abs(int i)
 {
 	if (i < 0)
@@ -13,7 +12,6 @@ int _abs(int i)
 	}
 	else
 	{
-		i = i;
 	}
 	return (i);
 }
