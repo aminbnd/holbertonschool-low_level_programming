@@ -1,14 +1,16 @@
 #include "holberton.h"
-/** main - Entry point
+
+/**
+ * print_alphabet - Entry point
  *
- * Return: 0
+ * Return: void
  *
  */
 void print_alphabet(void)
 {
 	char c;
 
-	for (c = 'a'; c <='z'; c++)
+	for (c = 'a'; c <= 'z'; c++)
 	{
 		_putchar (c);
 	}
