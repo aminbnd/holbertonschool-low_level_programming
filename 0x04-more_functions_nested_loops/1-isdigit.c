@@ -2,6 +2,7 @@
 #include <stdio.h>
 /**
   *_isdigit - checks for a digit
+  *@c: intiger
   *Return: 1 if digit 0 otherwise
   */
 
