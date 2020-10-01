@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
   **_strncat - concatenates wto strings
   *@dest: pointer
@@ -12,7 +11,7 @@ char *_strncat(char *dest, char *src, int n)
 	int i = 0;
 	int j;
 
-	while (src[i] != '\0')
+	while (dest[i] != '\0')
 	{
 		i++;
 	}
