@@ -23,7 +23,7 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		if (accept[j] == '\0')
 		{
-			break; /** at the end of "oleh" = accept */
+			break; /* at the end of "oleh" (accept)*/
 		}
 		i++;
 	}
