@@ -13,7 +13,7 @@ void one (int mul)
 }
 
 /**
- * two - Prints the two digits block 
+ * two - Prints the two digits block of statements 
  * @mul: multiplicaion result for the later variables i and j
  * Return: void
  */
