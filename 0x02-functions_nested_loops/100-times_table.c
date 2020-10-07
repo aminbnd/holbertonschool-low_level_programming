@@ -4,7 +4,7 @@
  * @mul: multiplicaion result for the later variables i and j
  * Return: void
  */
-void one (int mul)
+void one(int mul)
 {
 	_putchar (' ');
 	_putchar (' ');
@@ -13,11 +13,11 @@ void one (int mul)
 }
 
 /**
- * two - Prints the two digits block of statements 
+ * two - Prints the two digits block of statements
  * @mul: multiplicaion result for the later variables i and j
  * Return: void
  */
-void two (int mul)
+void two(int mul)
 {
 	_putchar (' ');
 	_putchar (' ');
@@ -29,7 +29,7 @@ void two (int mul)
  * @mul: multiplicaion result for the later variables i and j
  * Return: void
  */
-void three (int mul)
+void three(int mul)
 {
 	_putchar (' ');
 	_putchar (mul / 100 + '0');
@@ -58,25 +58,24 @@ void print_times_table(int n)
 				mul = i * j;
 				if (mul >= 100)
 				{
-					three (mul);
+					three(mul);
 					if (j != n)
 					_putchar(',');
 				}
 				else if (mul >= 10)
 				{
-					two (mul);
+					two(mul);
 					if (j != n)
 					_putchar(',');
 				}
 				else
 				{
-					one (mul);
+					one(mul);
 					if (j != n)
 					_putchar (',');
 				}
 			}
 			_putchar ('\n');
 		}
-		
 	}
 }
