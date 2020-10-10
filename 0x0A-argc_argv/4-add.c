@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 			{
 				if (!isdigit(argv[argc][i]))
 				{
-					puts("ERROR");
+					puts("Error");
 					return (1);
 				}
 			}
