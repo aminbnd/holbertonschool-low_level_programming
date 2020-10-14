@@ -24,6 +24,5 @@ int *array_range(int min, int max)
 		i++;
 		j++;
 	}
-	
 	return (a);
 }
