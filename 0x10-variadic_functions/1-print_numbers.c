@@ -15,13 +15,13 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	/* initializing valist*/
 	va_start(valist, n);
 	/* accessing all the arguments*/
-	for (i = 0; i < n - 1; i++)
+	for (i = 0; i < n; i++)
 	{
-		printf("%d", va_arg(valist, const unsigned int));
-		if (separator)
-			printf("%s", separator);
+		if(separator && i != n -1)
+			printf("%d%s", va_arg(valist, const unsigned int), separator);
+		else
+			printf("%d", va_arg(valist, const unsigned int));
 	}
-	printf("%d", va_arg(valist, const unsigned int));
 	va_end(valist);
 	printf("\n");
 }
