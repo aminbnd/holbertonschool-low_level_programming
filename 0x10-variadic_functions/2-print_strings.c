@@ -28,8 +28,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	}
 	s = va_arg(valist, char*);
 	if (!s)
-		printf("(nil)\n");		
+		s = "(nil)";
 	else
-		printf("%s\n", s);	
+		printf("%s\n", s);
 	va_end(valist);
 }
