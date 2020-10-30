@@ -16,7 +16,7 @@ typedef struct list_s
 	struct list_s *next;
 } list_t;
 int _putchar(char c);
-typedef unsigned long size_t;
+typedef unsigned long int size_t;
 size_t print_list(const list_t *h);
 
 #endif
