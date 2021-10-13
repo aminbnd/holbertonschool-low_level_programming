@@ -1,81 +1,49 @@
 #include "holberton.h"
-/**
- * one - prints the one digit block of statements
- * @mul: multiplicaion result for the later variables i and j
- * Return: void
- */
-void one(int mul)
-{
-	_putchar (' ');
-	_putchar (' ');
-	_putchar (' ');
-	_putchar ('0' + mul);
-}
 
 /**
- * two - Prints the two digits block of statements
- * @mul: multiplicaion result for the later variables i and j
- * Return: void
- */
-void two(int mul)
-{
-	_putchar (' ');
-	_putchar (' ');
-	_putchar ('0' + mul / 10);
-	_putchar ('0' + mul % 10);
-}
-/**
- * three - Prints the three digits block
- * @mul: multiplicaion result for the later variables i and j
- * Return: void
- */
-void three(int mul)
-{
-	_putchar (' ');
-	_putchar (mul / 100 + '0');
-	_putchar ((mul / 10) % 10 + '0');
-	_putchar (mul % 10 + '0');
-}
-
-/**
- * print_times_table - prints n times table
- * @n: integer
+ * print_times_table - function that prints the n times table, starting with 0.
+ * @n: integer, size of the table
  * Return: void
  */
 
 void print_times_table(int n)
 {
-	int i, j, mul;
+	int i, j, res;
 
-	if (n >= 0 && n <= 15)
+	if (n > 0 && n < 15)
 	{
 		for (i = 0; i <= n; i++)
 		{
-			_putchar ('0');
-			_putchar (',');
+			_putchar('0');
 			for (j = 1; j <= n; j++)
 			{
-				mul = i * j;
-				if (mul >= 100)
+				res = i * j;
+				if (res < 10)
 				{
-					three(mul);
-					if (j != n)
-					_putchar(',');
+					if (j <= n)
+					{
+						oneDigitResultLayout();
+					}
+					oneDigitResult(res);
 				}
-				else if (mul >= 10)
+				else if (res < 100)
 				{
-					two(mul);
-					if (j != n)
-					_putchar(',');
+					if (j <= n)
+					{
+						twoDigitsResultLayout();
+					}
+					twoDigitResult(res);
 				}
 				else
 				{
-					one(mul);
-					if (j != n)
-					_putchar (',');
+					if (j <= n)
+					{
+						threeDigitsResultLayout();
+					}
+					threeDigitResult(res);
 				}
 			}
-			_putchar ('\n');
+			_putchar('\n');
 		}
 	}
 }
