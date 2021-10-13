@@ -1,90 +1,82 @@
 #include "holberton.h"
 
 /**
- * oneDigitResultLayout - prints one digit multiplication result layout
+ * one - prints the one digit block of statements
+ * @mul: multiplicaion result for the later variables i and j
  * Return: void
  */
-void oneDigitResultLayout(void)
+void one(int mul)
 {
-	_putchar(',');
-	_putchar(' ');
-	_putchar(' ');
-	_putchar(' ');
+	_putchar (' ');
+	_putchar (' ');
+	_putchar (' ');
+	_putchar ('0' + mul);
 }
 
 /**
- * twoDigitsResultLayout - prints one digit multiplication result layout
+ * two - Prints the two digits block of statements
+ * @mul: multiplicaion result for the later variables i and j
  * Return: void
  */
-void twoDigitsResultLayout(void)
+void two(int mul)
 {
-	_putchar(',');
-	_putchar(' ');
-	_putchar(' ');
-
+	_putchar (' ');
+	_putchar (' ');
+	_putchar ('0' + mul / 10);
+	_putchar ('0' + mul % 10);
 }
-
-
-
 /**
- * threeDigitResult - prints three digits multiplication result
- * @res: int, the multiplication result
+ * three - Prints the three digits block
+ * @mul: multiplicaion result for the later variables i and j
  * Return: void
  */
-
-void threeDigitResult(int res)
+void three(int mul)
 {
-	_putchar('0' + res / 100);
-	_putchar('0' + (res / 10) % 10);
-	_putchar('0' + res % 10);
+	_putchar (' ');
+	_putchar (mul / 100 + '0');
+	_putchar ((mul / 10) % 10 + '0');
+	_putchar (mul % 10 + '0');
 }
 
 /**
- * print_times_table - function that prints the n times table, starting with 0.
- * @n: integer, size of the table
+ * print_times_table - prints n times table
+ * @n: integer
  * Return: void
  */
 
 void print_times_table(int n)
 {
-	int i, j, res;
+	int i, j, mul;
 
-	if (n > 0 && n < 15)
+	if (n >= 0 && n <= 15)
 	{
 		for (i = 0; i <= n; i++)
 		{
-			_putchar('0');
+			_putchar ('0');
+			_putchar(',');
 			for (j = 1; j <= n; j++)
 			{
-				res = i * j;
-				if (res < 10)
+				mul = i * j;
+				if (mul >= 100)
 				{
-					if (j <= n)
-					{
-						oneDigitResultLayout();
-					}
-					_putchar('0' + res);
+					three(mul);
+					if (j != n)
+					_putchar(',');
 				}
-				else if (res < 100)
+				else if (mul >= 10)
 				{
-					if (j <= n)
-					{
-						twoDigitsResultLayout();
-					}
-					_putchar('0' + (res / 10));
-					_putchar('0' + (res % 10));
+					two(mul);
+					if (j != n)
+					_putchar(',');
 				}
 				else
 				{
-					if (j <= n)
-					{
-						_putchar(',');
-						_putchar(' ');
-					}
-					threeDigitResult(res);
+					one(mul);
+					if (j != n)
+					_putchar (',');
 				}
 			}
-			_putchar('\n');
+			_putchar ('\n');
 		}
 	}
 }
